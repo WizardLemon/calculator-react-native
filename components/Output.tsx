@@ -5,11 +5,11 @@ import {
     StyleSheet
 } from 'react-native';
 
-const Output = () => {
+const Output = (props: { userOutput: React.ReactNode; }) => {
     return (
         <View style={styles.display}>
             <Text style={styles.number}>
-                17
+                {props.userOutput}
             </Text>
         </View>
     );

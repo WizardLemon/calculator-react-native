@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    Button,
     Text,
     StyleSheet,
     ViewStyle,
@@ -10,14 +9,14 @@ import {
 
 interface CustomButtomProps {
     title: string;
-    //action: () => void;
+    action: () => void;
     style: ViewStyle;
     textStyle: TextStyle;
 }
 
-const CustomButton = ({ style, action, title }: CustomButtomProps) => {
+const CustomButton = ({ style, action, title, textStyle }: CustomButtomProps) => {
     return <TouchableOpacity style={[styles.button, style]} onPress={() => action()} activeOpacity={0.8}>
-        <Text>{title}</Text>
+        <Text style={textStyle}>{title}</Text>
     </TouchableOpacity>
 
 }
